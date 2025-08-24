@@ -23,6 +23,11 @@ try {
     PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
     PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC
   ]);
+  // 既存の $pdo = new PDO(...); の直後
+if (($driver ?? '') === 'pgsql') {
+  $pdo->exec("SET search_path TO app, public");
+}
+
 } catch (PDOException $e) {
   http_response_code(500);
   echo "DB接続エラー: " . htmlspecialchars($e->getMessage());
