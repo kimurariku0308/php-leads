@@ -4,14 +4,13 @@ CREATE TABLE IF NOT EXISTS users (
   password_hash VARCHAR(255) NOT NULL,
   created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
-
 CREATE TABLE IF NOT EXISTS leads (
   id SERIAL PRIMARY KEY,
   company VARCHAR(255) NOT NULL,
   contact VARCHAR(255),
-  email   VARCHAR(255),
-  phone   VARCHAR(50),
-  budget  INT DEFAULT 0,
+  email VARCHAR(255),
+  phone VARCHAR(50),
+  budget INT DEFAULT 0,
   timeline VARCHAR(16) DEFAULT 'mid',
   authority SMALLINT DEFAULT 0,
   tech_fit INT DEFAULT 5,
