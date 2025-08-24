@@ -29,6 +29,10 @@ try {
   exit;
 }
 
+$sslmode = getenv('DB_SSLMODE') ?: null;
+if ($driver === 'pgsql' && $sslmode) { $dsn .= ";sslmode={$sslmode}"; }
+
+
 /* 共通ユーティリティ */
 function csrf_token(): string {
   if (empty($_SESSION['csrf'])) $_SESSION['csrf'] = bin2hex(random_bytes(16));
