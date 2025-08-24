@@ -1,0 +1,10 @@
+:root { font-family: system-ui, -apple-system, "Segoe UI", "Hiragino Kaku Gothic ProN", "Noto Sans JP", sans-serif; color-scheme: light dark; }
+.container { max-width: 980px; margin: 2rem auto; padding: 0 1rem; }
+table { width:100%; border-collapse: collapse; }
+th,td { padding:.5rem; border-bottom:1px solid #ccc; }
+a.button, button, input[type=submit] { padding:.5rem .8rem; border:1px solid #999; border-radius:.5rem; text-decoration:none; cursor:pointer; background:#f6f6f6; }
+.badge { padding:.2rem .5rem; border-radius:.4rem; border:1px solid #999; }
+.score-80 { background:#d4f8d4; } .score-50 { background:#fff6c2; } .score-0 { background:#ffd4d4; }
+form .row { display:flex; gap:.5rem; margin:.5rem 0; }
+form .row > * { flex:1; }
+input, select, textarea { font: inherit; }
