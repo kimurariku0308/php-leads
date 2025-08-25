@@ -156,7 +156,7 @@ $t = csrf_token();
 <body>
 <div class="container">
   <h1>リード管理 & 受注確度スコア</h1>
-  <p><a class="button" href="/?action=export">CSVエクスポート</a>　
+  <p><a class="button" href="/?action=export">CSVエクスポート</a>
      <a class="button" href="/?action=logout">ログアウト</a></p>
   <form method="get" style="margin:.5rem 0;">
     <input type="hidden" name="action" value="list">
